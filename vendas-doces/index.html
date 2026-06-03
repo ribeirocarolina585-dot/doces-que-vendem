@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doces que Vendem - 80 Receitas de Docinhos</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f0fa;
+    color: #3d2b1a;
+    line-height: 1.6;
+}
+.container { max-width: 780px; margin: 0 auto; padding: 20px; }
+.capa {
+    text-align: center;
+    padding: 30px 20px 25px;
+    background: linear-gradient(180deg, #ede0f5 0%, #f7f0fa 100%);
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+.capa img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    margin-bottom: 18px;
+}
+.capa h1 {
+    font-size: 2em;
+    color: #5a1a6e;
+    margin-bottom: 6px;
+}
+.capa p.sub {
+    font-size: 1.05em;
+    color: #7B2D8E;
+    margin-bottom: 15px;
+}
+section { margin-bottom: 35px; }
+h2 {
+    font-size: 1.5em;
+    color: #5a1a6e;
+    border-bottom: 3px solid #d4a857;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+h3 {
+    font-size: 1.15em;
+    color: #7B2D8E;
+    margin: 12px 0 8px;
+}
+.bio {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+.bio-foto {
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #d4a857;
+}
+.bio-texto { flex: 1; }
+.bio-texto p { margin-bottom: 10px; }
+.grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 18px;
+    background: #fff;
+    padding: 18px 22px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.grade li {
+    list-style: none;
+    padding: 3px 0;
+    border-bottom: 1px dashed #e8d8f0;
+    font-size: 0.9em;
+}
+.grade li::before { content: "\01F36C "; }
+.bloco-bonus {
+    background: linear-gradient(135deg, #f7f0fa, #ede0f5);
+    border: 2px solid #d4a857;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+}
+.bloco-bonus h3 { color: #5a1a6e; font-size: 1.3em; }
+.bloco-bonus p { font-size: 1em; margin: 8px 0; }
+.para-quem {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.para-quem p { margin-bottom: 6px; }
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #5a1a6e, #7B2D8E);
+    padding: 35px 25px;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.cta h2 { color: #FFD700; border: none; font-size: 1.7em; margin-bottom: 10px; }
+.cta .preco {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #FFD700;
+    margin: 10px 0;
+}
+.cta .preco small { font-size: 0.4em; color: #e0c8f0; }
+.cta .btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #5a1a6e;
+    padding: 16px 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255,215,0,0.4);
+}
+.cta .btn:hover { background: #ffe44d; transform: scale(1.03); }
+.cta p.aviso { margin-top: 10px; font-size: 0.85em; color: #e0c8f0; }
+.faq-item {
+    background: #fff;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+.faq-item strong { color: #5a1a6e; display: block; margin-bottom: 4px; }
+footer {
+    text-align: center;
+    padding: 18px;
+    color: #a08972;
+    font-size: 0.82em;
+    border-top: 1px solid #ece3d6;
+}
+@media (max-width: 600px) {
+    .capa h1 { font-size: 1.4em; }
+    .grade { grid-template-columns: 1fr; }
+    .cta .preco { font-size: 2.2em; }
+    .cta .btn { padding: 14px 30px; font-size: 1.1em; }
+    .bio { flex-direction: column; align-items: center; text-align: center; }
+    .bio-foto { width: 130px; height: 130px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="capa">
+        <img src="capa_doces_festa.jpg" alt="Doces que Vendem - Ebook">
+        <h1>Doces que Vendem</h1>
+        <p class="sub">80 Receitas Irresistíveis para Você Lucrar em Casa</p>
+    </div>
+
+    <section>
+        <h2>Quem Sou Eu</h2>
+        <div class="bio">
+            <img class="bio-foto" src="carolina_foto.jpg" alt="Carolina Ribeiro">
+            <div class="bio-texto">
+                <p><strong>Olá, sou Carolina Ribeiro</strong>, criadora da <strong>Delícias na Hora</strong>.</p>
+                <p>Minha história na confeitaria começou de forma simples: uma vontade de empreender, uma batedeira e uma cozinha modesta. Passei madrugadas testando receitas, errei muitas vezes, aprendi com cada erro, e transformei esse conhecimento em um negócio real.</p>
+                <p>Com dedicação, meu trabalho chegou ao iFood, onde conquistei clientes fiéis. Mas eu sabia que podia ir além — comecei a ensinar outras mulheres que queriam empreender na confeitaria.</p>
+                <p><strong>Já ajudei centenas de alunas a dar o primeiro passo.</strong> Este ebook reúne o melhor do meu conhecimento para que você também transforme sua cozinha em uma fonte de renda!</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>O Que Você Vai Aprender</h2>
+        <div class="grade">
+<li>Brigadeiro</li>
+<li>Beijinho</li>
+<li>Cajuzinho</li>
+<li>Olho-de-Sogra</li>
+<li>Camafeu de Nozes</li>
+<li>Quindim</li>
+<li>Doce de Leite Cortado</li>
+<li>Brigadeiro de Colher</li>
+<li>Brigadeiro de Churros</li>
+<li>Brigadeiro de Paçoca</li>
+<li>Brigadeiro de Oreo</li>
+<li>Beijinho de Coco</li>
+<li>Cajuzinho de Amendoim</li>
+<li>Olho-de-Sogra com Ameixa</li>
+<li>Bombom de Nozes</li>
+<li>Palha Italiana</li>
+<li>Pudim de Leite Condensado</li>
+<li>Mousse de Maracujá</li>
+<li>Mousse de Limão</li>
+<li>Mousse de Chocolate</li>
+<li>Maria-Mole</li>
+<li>Suspiro</li>
+<li>Manjar Branco</li>
+<li>Cocada Cremosa</li>
+<li>Cocada Quebradinha</li>
+<li>Pé-de-Moleque</li>
+<li>Doce de Abóbora</li>
+<li>Brigadeiro Gourmet de Ninho</li>
+<li>Brigadeiro Gourmet de Oreo</li>
+<li>Brigadeiro Gourmet de Pistache</li>
+<li>Brigadeiro Gourmet de Limão Siciliano</li>
+<li>Brigadeiro Gourmet de Maracujá</li>
+<li>Brigadeiro Gourmet de Café</li>
+<li>Brigadeiro Gourmet de Churros</li>
+<li>Brigadeiro Gourmet de Paçoca</li>
+<li>Brigadeiro Gourmet de Morango</li>
+<li>Beijinho Gourmet de Coco Queimado</li>
+<li>Beijinho Gourmet de Abacaxi</li>
+<li>Cajuzinho Gourmet</li>
+<li>Trufa de Chocolate Belga</li>
+<li>Trufa de Maracujá</li>
+<li>Trufa de Limão Siciliano</li>
+<li>Trufa de Ninho</li>
+<li>Trufa de Pistache</li>
+<li>Bombom de Uva</li>
+<li>Bombom de Morango</li>
+<li>Bombom de Cereja</li>
+<li>Copinho de Sobremesa de Chocolate</li>
+<li>Copinho de Sobremesa de Ninho</li>
+<li>Copinho de Sobremesa de Maracujá</li>
+<li>Bolo no Pote de Chocolate</li>
+<li>Bolo no Pote de Ninho</li>
+<li>Bolo no Pote de Cenoura</li>
+<li>Brownie no Pote</li>
+<li>Pudim de Leite Ninho</li>
+<li>Pudim de Chocolate Branco</li>
+<li>Pudim de Coco</li>
+<li>Pudim de Paçoca</li>
+<li>Torta de Limão</li>
+<li>Torta de Maracujá</li>
+<li>Torta de Morango</li>
+<li>Torta Holandesa</li>
+<li>Cheesecake de Frutas Vermelhas</li>
+<li>Cheesecake de Ninho</li>
+<li>Mousse de Maracujá com Calda</li>
+<li>Mousse de Chocolate Belga</li>
+<li>Mousse de Ninho</li>
+<li>Mousse de Morango</li>
+<li>Pavê de Chocolate</li>
+<li>Pavê de Ninho</li>
+<li>Pavê de Maracujá</li>
+<li>Pavê de Coco</li>
+<li>Pavê de Paçoca</li>
+<li>Gelatina Colorida</li>
+<li>Gelatina de Leite Ninho</li>
+<li>Salada de Frutas Cremosa</li>
+<li>Bombocado</li>
+<li>Broinha de Coco</li>
+<li>Queijadinha</li>
+<li>Bolo de Pote de Prestígio</li>
+
+        </div>
+        <p style="text-align:center; margin-top:10px; color:#7B2D8E;">⭐ São 80 receitas testadas, do clássico ao gourmet!</p>
+    </section>
+
+    <section>
+        <h2>Por Que Este Ebook é Para Você</h2>
+        <div class="bloco-bonus">
+            <h3>Lucro Real na Sua Cozinha</h3>
+            <p>Ingredientes baratos que você encontra na Hortmart — gastando pouco, lucrando muito!</p>
+            <p style="margin-top:10px;"><strong>Receitas passo a passo</strong></p>
+            <p>Modo de preparo detalhado, com dicas de conservação e rendimento. Ideal para iniciantes.</p>
+            <p style="margin-top:10px;"><strong>Do clássico ao gourmet</strong></p>
+            <p>Brigadeiro, beijinho, trufas, pudins, tortas, mousses, pavês e muito mais!</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Para Quem É Este Ebook</h2>
+        <div class="para-quem">
+            <p> Quem quer começar a fazer doces para vender</p>
+            <p> Donas de casa que buscam uma renda extra</p>
+            <p> Quem já faz doces mas quer diversificar o cardápio</p>
+            <p> Quem quer trabalhar de casa, sem patrão</p>
+            <p> Confeiteiras que buscam receitas testadas e aprovadas</p>
+        </div>
+    </section>
+
+    <div class="cta">
+        <h2>Garanta Seu Ebook Agora</h2>
+        <p>80 receitas de docinhos com passo a passo completo</p>
+        <div class="preco">R$ 8,00 <small>/ à vista</small></div>
+        <a class="btn" href="https://wa.me/5511914002547?text=Ol%C3%A1%20Carol!%20Quero%20comprar%20o%20ebook%20Doces%20que%20Vendem" target="_blank">QUERO MEU EBOOK</a>
+        <p class="aviso">Pagamento 100% seguro • Acesso vitalício • PDF para baixar</p>
+    </div>
+
+    <section>
+        <h2>Dúvidas Frequentes</h2>
+        <div class="faq-item">
+            <strong>Como vou receber o ebook?</strong>
+            <p>Após a confirmação do pagamento, você recebe um link para baixar o PDF direto no seu e-mail.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Preciso de experiência em confeitaria?</strong>
+            <p>Não! As receitas são explicadas passo a passo, com ingredientes simples. Ideal para iniciantes.</p>
+        </div>
+        <div class="faq-item">
+            <strong>São receitas testadas mesmo?</strong>
+            <p>Sim! Todas as 80 receitas foram testadas e aprovadas. Você não vai errar.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Tem garantia?</strong>
+            <p>Sim! Se por algum motivo você não ficar satisfeita, devolvemos 100% do seu dinheiro.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Delícias na Hora &copy; 2026 — Carolina Ribeiro</p>
+        <p>Este produto é vendido por <strong>Carolina Ribeiro</strong>.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
